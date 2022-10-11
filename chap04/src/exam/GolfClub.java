@@ -5,7 +5,7 @@ public class GolfClub {
 	private String putter;
 
 	public GolfClub() {
-		this.iron = 7;
+		this(7);
 	}
 
 	public GolfClub(int iron) {

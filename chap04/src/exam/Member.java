@@ -1,10 +1,10 @@
 package exam;
 
 class Member {
-	public String name;
-	public String id;
-	public String password;
-	public int age;
+	private String name;
+	private String id;
+	private String password;
+	private int age;
 
 	public Member(String name, String id, String password, int age) {
 		this.name = name;
