@@ -12,11 +12,8 @@ public class HistogramDemo {
 
 		for (int i = 0; i < 10; i++) {
 			arr[i] = in.nextInt();
-			if (arr[i] < 0)
-				continue;
-			else {
+			if (arr[i] >= 0)
 				count[arr[i] / 10]++;
-			}
 		}
 		for (int i = 0; i < 10; i++) {
 			if (i == 0)
