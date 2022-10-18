@@ -1,6 +1,6 @@
 package exam;
 
-public class Smartphone extends Phone {
+public class Smartphone extends Telephone {
 	private String game;
 
 	public Smartphone(String owner, String game) {

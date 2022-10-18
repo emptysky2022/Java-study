@@ -8,6 +8,10 @@ public class Telephone extends Phone {
 		this.when = when;
 	}
 
+	public Telephone(String owner) {
+		super(owner);
+	}
+
 	public void autoAnswering() {
 		System.out.println(owner + "가 없다. " + when + " 전화 줄래.");
 	}
