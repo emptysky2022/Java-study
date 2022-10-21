@@ -6,6 +6,8 @@ public class StringTest {
 		String str2 = new String("hello");
 
 		System.out.println(str1 == str2);
+		System.out.println(str1.hashCode());
+		System.out.println(str2.hashCode());
 
 		String str3 = "hello";
 		String str4 = "hello";
