@@ -17,10 +17,12 @@ public class SimpleDateFormatDemo {
 		System.out.println(sdf2.format(d));
 
 		try {
-			d = sdf2.parse("2023-11-30");
+			d = sdf1.parse("2023-11-30");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println(e.getMessage());
+			System.out.println(e.toString());
+
 		}
 
 		System.out.println(sdf1.format(d));
