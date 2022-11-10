@@ -1,12 +1,13 @@
 package exam.prac;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class PracMain {
-	static int[] age = { 25, 20, 29, 28, 32, 18 };
+	static int arrCount = 0;
 
 	enum Gender {
 		남, 여
@@ -43,9 +44,18 @@ public class PracMain {
 		i1 = ages.stream();
 		Double ave = i1.collect(Collectors.averagingDouble(x -> x.doubleValue()));
 		System.out.println(ave.doubleValue());
-		// 3-2
+		// 3
 		Stream<String> nameStream = names.stream();
-		Stream<Member> member = nameStream.map(n -> new Member(n, null, 0));
+		Stream<Member> member = nameStream.map(n -> new Member(n, genders.get(arrCount), ages.get(arrCount++)));
 
+		System.out.println("[Member 스트림 원소]");
+		member.forEach(x -> System.out.print(x + " "));
+
+		System.out.println("\n\n[Member 스트림을 성별로 그룹핑]");
+		arrCount = 0;
+		Map<Gender, List<Member>> group = names.stream()
+				.map(n -> new Member(n, genders.get(arrCount), ages.get(arrCount++)))
+				.collect(Collectors.groupingBy(Member::getGender));
+		System.out.print(group);
 	}
 }
